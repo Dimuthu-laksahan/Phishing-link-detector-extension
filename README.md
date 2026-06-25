@@ -27,29 +27,7 @@ The system utilizes an **Offscreen Document** context to execute ONNX models saf
 
 ### Data Flow & Architecture Diagram
 
-![System Architecture](./architecture_diagram.png)
-
-```mermaid
-flowchart TD
-    subgraph Browser Tab Context
-        User([User Navigation]) -->|onUpdated complete| SW[background.js Service Worker]
-        SW -->|Inject warning.css & warning.js| Tab[Active Tab DOM]
-    end
-
-    subgraph Offscreen Document (Full HTML DOM)
-        SW -->|chrome.runtime.sendMessage| Offscreen[offscreen.js Runner]
-        Offscreen -->|Load Model & Inference| Model[(model.onnx)]
-        Offscreen -->|Return phishing probability| SW
-    end
-
-    subgraph Injected Warning Overlay
-        Tab -->|Shadow DOM Isolation| Overlay[warning.js Warning UI]
-        Overlay -->|Button: Go Back| SW
-        Overlay -->|Button: Proceed| Unblock[Remove Shadow Host]
-    end
-```
-
----
+<img width="1024" height="1024" alt="architecture_diagram_1782408082835" src="https://github.com/user-attachments/assets/1300a7ee-03dc-4a69-ae04-999717946a2d" />
 
 ## 📂 Project Structure
 
