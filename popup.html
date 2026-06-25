@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 15px;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    h3 { margin-top: 0; color: #333; }
+    .url-display {
+      font-size: 11px;
+      word-break: break-all;
+      background: #eee;
+      padding: 6px;
+      border-radius: 4px;
+      max-height: 50px;
+      overflow-y: auto;
+      color: #555;
+    }
+    .result-container {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .loading { background: #e0f0ff; color: #0066cc; }
+    .safe { background: #e6f4ea; color: #137333; }
+    .phishing { background: #fce8e6; color: #c5221f; }
+    .percentage { font-size: 24px; display: block; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <h3>Phishing URL Analysis</h3>
+  <div id="current-url" class="url-display">Fetching current URL...</div>
+  
+  <div id="result" class="result-container loading">
+    <span id="status-text">Loading Model...</span>
+    <span id="score" class="percentage">--%</span>
+  </div>
+
+  <script src="ort.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
