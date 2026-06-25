@@ -51,8 +51,7 @@ The system utilizes an **Offscreen Document** context to execute ONNX models saf
 <summary><b>Step 1: Clone the Repository</b> (Click to expand)</summary>
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/Dimuthu-laksahan/Phishing-link-detector-extension.git
 ```
 </details>
 
